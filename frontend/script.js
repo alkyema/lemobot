@@ -590,7 +590,7 @@ async function handleDomainClick(domain) {
         </div>`;
     messagesDiv.innerHTML += userMessage;
 
-    let response = await fetch("http://0.0.0.0:8000/Data_Fetch_Option_1");
+    let response = await fetch("http://lemobot2.netlify.app/Data_Fetch_Option_1");
     let data = await response.json();
     gdata = data;
     var filteredData = data.filter((item) => item.Domain === domain);
@@ -629,7 +629,7 @@ async function learnAboutProducts() {
     messagesDiv.innerHTML += userMessage;
 
     try {
-        let response = await fetch("http://0.0.0.0:8000/Data_Fetch_Option_1");
+        let response = await fetch("http://lemobot2.netlify.app/Data_Fetch_Option_1");
         if (response.ok) {
             let data = await response.json();
 
@@ -1093,7 +1093,7 @@ function handleIdeaResponse(response) {
 //Below are the functions for FAQS
 async function otherInquiries() {
     current_function = "otherInquiries";
-    let response = await fetch("http://0.0.0.0:8000/FAQs_Fetch");
+    let response = await fetch("http://lemobot2.netlify.app/FAQs_Fetch");
 
             let data = await response.json();
             var UniqueCategory = getUniqueCategory(data);
@@ -1126,7 +1126,7 @@ async function handleCategoryClick(Category){
             </div>
         </div>`;
     messagesDiv.innerHTML += userMessage;
-    let response = await fetch("http://0.0.0.0:8000/FAQs_Fetch");
+    let response = await fetch("http://lemobot2.netlify.app/FAQs_Fetch");
     let data = await response.json();
     var filteredData = data.filter((item) => item.Category === Category);
     var questions = filteredData.map((item) => item.Question);
@@ -1148,7 +1148,7 @@ async function handleCategoryClick(Category){
 async function Answer(Question){
     current_function = "Answer"
     var messagesDiv = document.getElementById("chat-section");
-    let response = await fetch("http://0.0.0.0:8000/FAQs_Fetch");
+    let response = await fetch("http://lemobot2.netlify.app/FAQs_Fetch");
     let data = await response.json();
     var userMessage = `
     <div class="chat-faq">
