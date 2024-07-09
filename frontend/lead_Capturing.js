@@ -11,7 +11,7 @@ function lead_Capturing(domain,name, emailID, Contact, Preffect_Mode_of_Contact,
     };
 
     // Define the URL of your FastAPI endpoint
-    const url = "http://localhost:8888/Lead_Capture";
+    const url = "http://0.0.0.0:8000/Lead_Capture";
 
     // Send POST request using fetch API
     fetch(url, {
